@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanascup - Merch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #006124;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: rgba(0, 97, 36, 0.1);
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 140px 20px 0px;
+        }
+
+        .hero-title {
+            font-size: 60px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .merch-content {
+            background: white;
+            padding: 80px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .coming-soon {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #318231;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #256a25;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="home.html" class="nav-btn">Home</a>
+            <a href="home.html#leaderboard" class="nav-btn">Leaderboard</a>
+            <a href="home.html#gallery" class="nav-btn">Gallery</a>
+            <a href="home.html#course" class="nav-btn">Course</a>
+            <a href="merch.html" class="nav-btn">Merch</a>
+            <a href="home.html#memorials" class="nav-btn">Memorials</a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <h1 class="hero-title">Official Merch Store</h1>
+        <p class="hero-subtitle">Get your exclusive Nanascup gear</p>
+    </section>
+
+    <div class="container">
+        <div class="merch-content">
+            <div id="sqd-container"></div>
+        </div>
+    </div>
+
+<script src="https://d2c-cta.s3-us-west-2.amazonaws.com/build/sqd/index.js"></script>
+<script>
+  var SQD = new sqd({
+    container: 'sqd-container',
+    moduleType: 'standard',
+    lockerId: '2650711',
+    environment: 'production',
+    theme: {
+      fontFamily: "'Lato', sans-serif",
+      color: '#2D3237',
+      backgroundColor: '#FFFFFF',
+      accentColor: '#8BC959'
+    }
+  });
+</script>
+</body>
+</html>
