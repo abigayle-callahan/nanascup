@@ -13,7 +13,7 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-  const filePath = req.url === '/' ? './home.html' : `.${req.url}`;
+  const filePath = req.url === '/' ? './index.html' : `.${req.url}`;
   const extname = path.extname(filePath);
   const contentType = mimeTypes[extname] || 'text/plain';
 
