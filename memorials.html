@@ -23,6 +23,18 @@
             padding: 80px 180px;
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            .memoriam-section {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .memoriam-section {
+                padding: 20px 10px;
+            }
+        }
         .years-title {
             font-size: 60px;
             font-weight: 1600;
@@ -58,9 +70,57 @@
             cursor: pointer;
         }
 
-        .Nana {
-            display: flex;
+        .people {
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .Nana {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .Nana:nth-child(even) {
+            grid-template-columns: 1fr 300px;
+        }
+
+        .Nana:nth-child(even) .content {
+            order: -1;
+        }
+
+        @media (max-width: 768px) {
+            .people {
+                gap: 40px;
+            }
+            
+            .Nana {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .Nana:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+            
+            .Nana:nth-child(even) .content {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .people {
+                gap: 30px;
+            }
+            
+            .Nana {
+                gap: 20px;
+            }
         }
 
 
@@ -74,6 +134,44 @@
         .description {
             font-size: 24px;
             text-align: left;
+        }
+
+        .Nana img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .memorial {
+                font-size: 32px;
+                text-align: center;
+            }
+            
+            .description {
+                font-size: 20px;
+                text-align: center;
+            }
+            
+            .Nana img {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .memorial {
+                font-size: 28px;
+            }
+            
+            .description {
+                font-size: 18px;
+            }
+            
+            .Nana img {
+                max-width: 200px;
+            }
         }
 
         .content {
